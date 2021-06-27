@@ -35,11 +35,11 @@ public abstract class GenericDAO<E, ID extends Serializable> {
     return sessionFactory.getCurrentSession();
   }
 
-  public E get(Number id) {
+  public E get(Serializable id) {
     return getCurrentSession().get(daoType, id);
   }
 
-  public E get(Number id, LockMode lockMode) {
+  public E get(Serializable id, LockMode lockMode) {
     return getCurrentSession().get(daoType, id, lockMode);
   }
 
