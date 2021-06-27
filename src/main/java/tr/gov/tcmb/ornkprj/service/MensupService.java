@@ -25,6 +25,14 @@ public class MensupService {
 
   public List<MensupDTO> listele() {
 
+    modelMapper.map(mensupDAO.list(), new TypeToken<List<MensupDTO>>() {}.getType());
+
+    return modelMapper.map(mensupDAO.list(), new TypeToken<List<MensupDTO>>() {}.getType());
+
+  }
+
+  public List<MensupDTO> listele2() {
+
     return modelMapper.map(mensupDAO.list(), new TypeToken<List<MensupDTO>>() {}.getType());
 
   }
